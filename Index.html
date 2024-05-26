@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Card Form</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" id="card">
+            <div class="card-front" id="card-front">
+                <div class="card-number" id="card-number">1234 **** **** 2355</div>
+                <div class="card-expiry" id="card-expiry">MM/YY</div>
+                <div class="card-holder" id="card-holder">Имя Фамилия</div>
+            </div>
+            <div class="card-back" id="card-back">
+                <div class="card-back-cvv">
+                    <div class="card-cvv" id="card-cvv">123</div>
+                    <div class="cvv-title">CVV</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="card-form">
+        <div class="form-group">
+            <label for="card-number-input">Card Number</label>
+            <input type="text" id="card-number-input" maxlength="16" required>
+            <span class="error-message" id="card-number-error"></span>
+        </div>
+        <div class="form-group">
+            <label for="card-holder-input">Card Holder</label>
+            <input type="text" id="card-holder-input" maxlength="100" required>
+            <span class="error-message" id="card-holder-error"></span>
+        </div>
+        <div class="form-group">
+            <div class="form-title">
+                <label for="card-expiry-month">Expiration Date</label>
+                <label for="card-cvv-input">CVV</label>
+            </div>
+            <div class="form-group-bottom">
+                <div class="expiry-date">
+                    <select id="card-expiry-month" required>
+                        <option value="">MM</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select id="card-expiry-year" required>
+                        <option value="">YYYY</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                    </select>
+                </div>
+                <div class="form-cvv-input">
+                    <span class="error-message" id="card-expiry-error"></span>
+                    <input type="text" id="card-cvv-input" maxlength="3" required>
+                    <span class="error-message" id="card-cvv-error"></span>
+                </div>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="./js/js.js"></script>
+</body>
+</html>
